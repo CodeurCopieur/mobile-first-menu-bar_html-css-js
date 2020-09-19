@@ -24,9 +24,7 @@
     }
 
 /*===== z index =====*/
-:root{
     $z-fixed: 100;
-}
 
 /*===== BASE =====*/
 *,::before,::after{
@@ -51,9 +49,131 @@ img{
     height: auto;
 }
 
+.bg-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
 /*===== HEADER =====*/
 
+.header {
+    width: 100%;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 1.5rem;
+    background-color: $dark-color;
+    z-index: $z-fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      color: $white-color;
+    }
+
+    .header__toggle {
+        font-size: 1.5rem;
+        color: $white-color;
+        cursor: pointer;
+    }
+}
+
 /*===== NAV =====*/
+@media screen and (max-width: 768px){
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $dark-color;
+        color: $white-color;
+        width: 100%;
+        height: 100vh;
+        padding: 1.5rem 0;
+        z-index: $z-fixed;
+        transition: .5s;
+
+    }
+}
+
+
+.nav {
+    .nav__content {
+      height: 100%;
+      grid-template-rows: max-content 1fr max-content;
+      row-gap: 2rem;
+
+      .nav__close {
+          position: absolute;
+          right: 1.5rem;
+          font-size: 1.3rem;
+          padding: .25rem;
+          background-color: $dark-color-alt;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      .nav__profil {
+
+        .nav__img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: .8rem;
+            width: 56px;
+            height: 56px;
+            background-color: $first-color;
+            border-radius: 50%;
+            overflow: hidden;
+
+            ion-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        div {
+            .nav__name {
+                display: block;
+                color: $white-color;
+            }
+
+            .nav__job  {
+                font-size: $small-font-size;
+            }
+        }
+      }
+
+      .nav__menu {
+          align-self: center;
+          .nav__list {
+            .nav__item {
+                margin: 2.5rem 0;
+                .nav__link {
+                    color: $white-color;
+                }
+            }
+          }
+      }
+
+      .nav__social {
+          padding-top: .5rem;
+
+          .nav__social-icon {
+            font-size: 1.2rem;
+             color: $white-color;
+             margin-right: 1rem;
+
+             &:hover {
+                 color: $first-color;
+             }
+          }
+      }
+    }
+}
 
 /*Aparecer menu*/
 
