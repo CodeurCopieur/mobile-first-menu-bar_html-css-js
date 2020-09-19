@@ -118,7 +118,7 @@ img{
 
       .nav__profil {
 
-        .nav__img {
+        .nav__icon {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -159,6 +159,8 @@ img{
                         color: $first-color;
                     }
 
+                    /*Active menu*/
+
                     &.active {
                         color: $first-color;
                     }
@@ -190,7 +192,79 @@ img{
     left: 0;
 }
 
-/*Active menu*/
-
 
 /*===== MEDIA QUERIES =====*/
+
+@media screen and (min-width: 768px) {
+
+    body {
+      margin: 0;
+      
+      .header {
+          height: 4rem;
+
+          .header__logo, .header__toggle {
+            display: none;
+          }
+
+          .nav {
+            width: 100%;
+
+            .nav__close, .nav__job {
+                display: none;
+            }
+
+            .nav__content {
+               grid-template-columns: repeat(3, max-content);
+               grid-template-rows: 1fr;
+               column-gap: 1rem;
+               justify-content: space-between;
+               max-width: unset;
+
+               .nav__profil {
+                   display: flex;
+                   align-items: center;
+                   .nav__icon {
+                       width: 32px;
+                       height: 32px;
+                       margin-bottom: 0px;
+                       margin-right: .5rem;
+
+                       ion-icon {
+                         font-size: 2rem;
+                         color: $white-color;
+                       }
+                   }
+               }
+
+               .nav__menu {
+                  .nav__list {
+                        display: flex;
+                    .nav__item {
+                        margin: 0 .25rem;
+
+                        .nav__link {
+                            padding: .5rem .8rem;
+                            border-radius: .25rem;
+                            &:hover {
+                              background-color: $first-color;
+                              color: $white-color;
+                            }
+                        }
+                    }
+                  }
+               }
+            }
+          }
+      }
+
+    }
+}
+
+
+@media screen and(min-width: 1024px){
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
