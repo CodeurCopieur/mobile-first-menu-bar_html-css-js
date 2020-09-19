@@ -9,6 +9,32 @@ html(lang="fr")
     link(rel="stylesheet", href="assets/css/index.css")
 
   body
+    //HEADER
+    .header
+      a(href="").header__logo Codwerk
+      ion-icon(name="menu-outline").header__toggle#nav-toggle
+
+      nav.nav#nav-manu
+        .nav__content.bg-grid
+          ion-icon(name="close-outline")
+
+          .nav__profil
+            .nav__img
+              ion-icon(name="person-circle-outline")
+            div
+              a(href="#").nav__name Codwerk
+              span.nav__job Intégrateur Front End
+          
+          .nav__menu
+            ul.nav__list
+              each val, index in ['home', 'about', 'skills','portfolio', 'contact']
+                li.nav__item
+                  a.nav__link= val
+      
+      .nav__social
+        each val, index in ['logo-github', 'logo-instagram', 'logo-twitter']
+          a.nav__social-icone(href="") 
+            ion-icon(name= val)
 
     //IONICONS
     script(src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js")
