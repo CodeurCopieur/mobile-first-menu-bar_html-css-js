@@ -67,7 +67,7 @@ img {
   .nav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     background-color: #070D1F;
     color: #E6E7E9;
     width: 100%;
@@ -110,7 +110,7 @@ img {
     border-radius: 50%;
     overflow: hidden; }
     .nav .nav__content .nav__profil .nav__img ion-icon {
-      font-size: 1.5rem; }
+      font-size: 1.75rem; }
   .nav .nav__content .nav__profil div .nav__name {
     display: block;
     color: #E6E7E9; }
@@ -123,16 +123,29 @@ img {
     .nav .nav__content .nav__menu .nav__list .nav__item {
       margin: 2.5rem 0; }
       .nav .nav__content .nav__menu .nav__list .nav__item .nav__link {
-        color: #E6E7E9; }
+        color: #E6E7E9;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        .nav .nav__content .nav__menu .nav__list .nav__item .nav__link:hover {
+          color: #3664F4; }
+        .nav .nav__content .nav__menu .nav__list .nav__item .nav__link.active {
+          color: #3664F4; }
   .nav .nav__content .nav__social {
     padding-top: .5rem; }
     .nav .nav__content .nav__social .nav__social-icon {
       font-size: 1.2rem;
       color: #E6E7E9;
-      margin-right: 1rem; }
+      margin-right: 1rem;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
       .nav .nav__content .nav__social .nav__social-icon:hover {
         color: #3664F4; }
 
 /*Aparecer menu*/
+.show {
+  left: 0; }
+
 /*Active menu*/
 /*===== MEDIA QUERIES =====*/

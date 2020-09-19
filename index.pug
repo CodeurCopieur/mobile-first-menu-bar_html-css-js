@@ -14,7 +14,7 @@ html(lang="fr")
       a(href="").header__logo Codwerk
       ion-icon(name="menu-outline").header__toggle#nav-toggle
 
-      nav.nav#nav-manu
+      nav.nav#nav-menu
         .nav__content.bg-grid
         
           ion-icon(name="close-outline").nav__close#nav-close
@@ -30,14 +30,14 @@ html(lang="fr")
             ul.nav__list
               each val, index in ['home', 'about', 'skills','portfolio', 'contact']
                 li.nav__item
-                  a.nav__link= val
+                  a(href="#" "class"=( index == 0 ? "active" : "")).nav__link= val
       
           .nav__social
             each val, index in ['logo-github', 'logo-instagram', 'logo-twitter']
-              a.nav__social-icon(href="") 
+              a(href="#").nav__social-icon 
                 ion-icon(name= val)
 
-    //IONICONS
+    // IONICONS
     script(src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js")
     // MAIN
     script(src="assets/js/index.js")

@@ -88,7 +88,7 @@ img{
     .nav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: $dark-color;
         color: $white-color;
         width: 100%;
@@ -96,7 +96,6 @@ img{
         padding: 1.5rem 0;
         z-index: $z-fixed;
         transition: .5s;
-
     }
 }
 
@@ -131,7 +130,7 @@ img{
             overflow: hidden;
 
             ion-icon {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
             }
         }
 
@@ -154,6 +153,15 @@ img{
                 margin: 2.5rem 0;
                 .nav__link {
                     color: $white-color;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $first-color;
+                    }
+
+                    &.active {
+                        color: $first-color;
+                    }
                 }
             }
           }
@@ -166,6 +174,7 @@ img{
             font-size: 1.2rem;
              color: $white-color;
              margin-right: 1rem;
+             transition: .5s;
 
              &:hover {
                  color: $first-color;
@@ -177,6 +186,11 @@ img{
 
 /*Aparecer menu*/
 
+.show {
+    left: 0;
+}
+
 /*Active menu*/
+
 
 /*===== MEDIA QUERIES =====*/
