@@ -1,0 +1,62 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*===== VARIABLES CSS =====*/
+
+    $header-height: 3rem;
+
+/*===== Colores =====*/
+
+    $first-color: #3664F4;
+    $dark-color: #070D1F;
+    $dark-color-alt: #282B3A;
+    $white-color: #E6E7E9;
+
+/*===== Fuente y tipografia =====*/
+
+    $body-font: 'Poppins', sans-serif;
+    $normal-font-size: .938rem;
+    $small-font-size: .813rem;
+
+    @media screen and (min-width: 768px){
+        $normal-font-size: 1rem;
+        $small-font-size: .875rem;
+    }
+
+/*===== z index =====*/
+:root{
+    $z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    margin: $header-height 0 0 0;
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    font-weight: 500;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*===== HEADER =====*/
+
+/*===== NAV =====*/
+
+/*Aparecer menu*/
+
+/*Active menu*/
+
+/*===== MEDIA QUERIES =====*/
